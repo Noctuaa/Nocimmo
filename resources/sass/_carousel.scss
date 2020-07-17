@@ -1,0 +1,144 @@
+ /*********************************************
+CAROUSEL [SHOW REAL ESTATE]
+**********************************************/
+
+ .carousel {
+     position: relative;
+     background-color: black;
+     overflow: hidden;
+     height: 521px;
+     width: 85%;
+     margin-bottom: 70px;
+     border-radius: .3rem;
+
+     @media #{$media-large} {
+         height: auto;
+         width: 100%;
+     }
+ }
+
+ #carousel2,
+ .carousel_next,
+ .carousel_prev {
+     @media #{$media-large} {
+         display: none !important;
+     }
+ }
+
+
+/*First Carousel*/
+ #carousel1 img {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel_next,
+.carousel_prev {
+    margin-top: -20px;
+    right: 0px;
+    font-size: 40px;
+    top: 50%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    color: rgb(255, 255, 255);
+}
+
+.carousel_next {
+    transform: rotate(90deg);
+    right: 10px;
+}
+
+.carousel_prev {
+    right: auto;
+    transform: rotate(-90deg);
+    left: 10px;
+}
+
+
+/*Second Carousel*/
+
+ #carousel2 {
+     background-color: black;
+     position: absolute;
+     z-index: 10;
+     bottom: 40px;
+     width: 100%;
+     display: flex;
+     padding: 0px;
+     height: 83px;
+     visibility: visible;
+     transition-duration: .6s;
+
+     .item{
+         cursor: pointer;
+     }
+
+     img {
+        height: 80px;
+        background-color: rgb(0, 0, 0);
+        opacity: .4;
+        transition-duration: .3s;
+    }
+
+     .is-current img {
+        opacity: 1 !important;
+        transition-duration: .3s;
+    }
+ }
+
+ .button_state {
+    color: rgb(255, 255, 255);
+    margin: 0px 10px;
+    cursor: pointer;
+    transition-duration: .3s;
+    @media #{$media-large} {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+ .hide {
+    visibility: hidden !important;
+    height: 0px !important;
+    transition-duration: .6s !important;
+}
+
+
+
+ /*Pagination Carousel*/
+ .carousel_pagination {
+     display: flex;
+     position: absolute;
+     bottom: 0px;
+     height: 40px;
+     left: 0px;
+     right: 0px;
+     text-align: center;
+     background-color: #2b2937;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     z-index: 10;
+
+     @media #{$media-large} {
+         position: relative;
+     }
+
+     button {
+        display: inline-flex;
+        width: 10px;
+        height: 10px;
+        background-color: #000;
+        opacity: 0.8;
+        border-radius: 10px;
+        margin: 0px 2px;
+    }
+
+    .active{
+        background-color: rgb(255, 255, 255);
+    }
+ }
+ .chevron_down {
+     transform: rotate(180deg);
+ }

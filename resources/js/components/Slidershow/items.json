@@ -1,0 +1,35 @@
+[
+    {
+        "id": 0,
+        "url": "images/courchevel_1.jpg",
+        "effect": "fade",
+        "title": "Chalets et Caviar",
+        "city": "Courchevel",
+        "subtitle": "vente et location",
+        "icon": "home"
+    },
+    {
+        "id": 1,
+        "url": "images/courchevel_2.jpg",
+        "effect": "slideLeft",
+        "title": "Chalets d'exceptions",
+        "subtitle": "Tranquilité",
+        "icon": "mug-hot"
+    },
+    {
+        "id": 2,
+        "url": "images/courchevel_3.jpg",
+        "effect": "slideDown",
+        "title": "Paysages magnifiques",
+        "subtitle": "Plein les yeux",
+        "icon": "glasses"
+    },
+    {
+        "id": 3,
+        "url": "images/courchevel_4.jpg",
+        "effect": "slideLeft",
+        "title": "Univers reposant",
+        "subtitle": "Calme",
+        "icon": "cloud"
+    }
+]

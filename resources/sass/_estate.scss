@@ -1,0 +1,137 @@
+ /*********************************************
+GENERAL
+**********************************************/
+
+#banner {
+    opacity: .1;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+}
+
+/*********************************************
+ ESTATE LIST
+**********************************************/
+.estate_list {
+    position: relative;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    box-shadow: 0px 2px 0px 0px rgba(227, 228, 231, 1);
+    font-size: 13px;
+    background-color: #fdfdfd;
+    cursor: pointer;
+    float: left;
+    padding-bottom: 50px;
+    transition-duration: .3s;
+    color: rgb(118, 128, 130);
+    height: 400px;
+    width: 255px;
+
+    &:hover {
+        box-shadow: 0px 0px 5px 1px rgba(21, 26, 42, 0.33);
+        background-color: #fff;
+        transition-duration: .3s;
+
+        h4 {
+            color: rgb(78, 115, 223);
+            transition-duration: .3s;
+        }
+    }
+
+    h4 {
+        color: rgb(56, 56, 56);
+        transition-duration: .3s;
+    }
+
+    .card-body{
+        border-top: 3px solid rgb(44,96,228);
+    }
+
+    .estate_img{
+        width: 100%;
+        height: 161px;
+        border-radius: 4px 4px 0px 0px;
+        box-shadow: 0 -3px 3px rgb(21, 26, 42);
+        background-color:  rgb(44,96,228);
+    }
+    
+    .estate_description {
+        line-height: 22px;
+    }
+    
+    .estate_price {
+        position: absolute;
+        bottom: 0px;
+        left: 15px;
+        right: 15px;
+        height: auto;
+        border-top: 1px solid #f0f0f0;
+        color: rgb(78, 115, 223);
+        font-size: 16px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #fff;
+    }
+}
+
+
+
+.estate_details {
+    margin-bottom: 10px;
+
+    & span {
+        margin-right: 7px;
+    }
+
+    & .fa-icon {
+        margin-right: 3px;
+        font-size: 15px;
+        color: #99a3b1;
+    }
+}
+
+
+/*********************************************
+ CONTENT SHOW
+**********************************************/
+#show{
+
+    font-family: "Arapey", "serif";
+    color: rgb(84,84,84);
+    font-size: 1.2rem;
+
+    hr {
+        width: 50%;
+        height: 1px;
+        background-color: rgba(84,84,84,0.2);
+        margin-bottom: 30px!important;
+    }
+
+    p, ul{
+        text-shadow: 0px 1px 0px #000000;
+    }
+
+    .h2 , h2 {
+        font-size: 2.1rem;
+    }
+
+    .description , .details {
+        
+        .h2 , h2 {
+            margin-bottom: 15px;
+            font-family: 'Alegreya', serif;
+            font-weight: 400;
+        }
+    
+    } 
+}
+
+
+
+
+
+

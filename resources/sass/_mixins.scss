@@ -1,0 +1,6 @@
+	// Mixin effets sur les spans Hamburger
+	@mixin effect_span($rotate, $duration, $delay) {
+		transform: $rotate;
+		transition-duration: $duration;
+		transition-delay: $delay;
+	}

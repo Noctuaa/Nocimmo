@@ -1,0 +1,16 @@
+ /*********************************************
+LOGIN
+**********************************************/
+
+#bg-login-image{
+    background-size: cover;
+    border-radius: 0.25rem 0rem 0rem 0.25rem;
+    @media #{$media-large} {
+        background-image: none;
+        display: none;
+    }
+}
+
+.card-auth{
+    width: 100%;
+}

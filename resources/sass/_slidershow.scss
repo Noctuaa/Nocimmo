@@ -1,0 +1,164 @@
+/*********************************************
+ Slider Background
+**********************************************/
+
+.slider{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.slide-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+
+    div {
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0);
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        visibility: inherit;
+        z-index: 20;
+    }
+}
+
+/*********************************************
+Captions
+**********************************************/
+
+.caption_wrapper {
+    display: inline-flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: opacity 2s;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+
+.caption {
+    z-index: 35;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    text-shadow: -1px -1px 2px #151a2a;
+    line-height: 10px;
+
+    & .title {
+        font-size: 50px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        line-height: normal;;
+    }
+
+    & .city {
+        font-size: 30px;
+        padding: 0px 0px 15px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    & .subtitle {
+        font-size: 21px;
+        letter-spacing: 3px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    & .fa-icon {
+        /*width: calc(30px + 2vmin);
+        height: calc(45px + 2vmin);*/
+        z-index: 35;
+        filter: drop-shadow(0px -3px 2px #151a2a);
+        font-size: 44px;
+    }
+}
+
+/*********************************************
+Transitions Animations Slides
+**********************************************/
+
+@mixin propertyAnimation {
+    animation-duration: 1s;
+    position: absolute;
+}
+
+
+/*******Fade*******/
+
+@keyframes fadeEnter {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+@keyframes fadeLeave {
+    from { opacity: 1;}
+    to { opacity: 0;}
+}
+
+.fade-enter-active {
+    animation-name: fadeEnter;
+    @include propertyAnimation;
+}
+
+.fade-leave-active {
+    animation-name: fadeLeave;
+    @include propertyAnimation;
+}
+
+/*******SlideInLeft*******/
+@keyframes slideInLeft {
+    from { transform: translateX(-100%);}
+    to { transform: translateX(0);}
+}
+
+@keyframes slideLeave {
+    from { opacity: 1;}
+    to { opacity: 1;}
+}
+
+
+.slideLeft-enter-active {
+    animation-name: slideInLeft;
+    @include propertyAnimation;
+}
+
+.slideLeft-leave-active {
+    animation-name: slideLeave;
+    @include propertyAnimation;
+}
+
+
+/*******SlideInDown*******/
+
+@keyframes slideInDown {
+    from { transform: translateY(-100%);}
+    to { transform: translateY(0);}
+}
+
+ .slideDown-enter-active {
+    animation-name: slideInDown;
+    @include propertyAnimation;
+
+}
+
+.slideDown-leave-active {
+    animation-name: slideLeave;
+    @include propertyAnimation;
+}

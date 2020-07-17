@@ -1,0 +1,23 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Adamina&display=swap');
+
+// Variables
+@import 'variables';
+
+// Mixins
+@import 'mixins.scss';
+
+// Custom Components
+@import "nav.scss";
+@import "footer.scss";
+@import "estate.scss";
+@import "global.scss";
+@import "home.scss";
+@import "carousel.scss";
+@import "slidershow.scss";
+@import "search.scss";
+@import "auth.scss";
+
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';

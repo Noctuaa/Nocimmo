@@ -1,0 +1,128 @@
+ /*********************************************
+ General Footer
+**********************************************/
+
+footer {
+    background-color: #282D33;
+    color: #72777F;
+    flex-shrink: 0;
+    
+
+    & h3 {
+        font-size: 16px;
+        color: #fff;
+    }
+
+    & ul {
+        margin: 20px 0px 0px 0px;
+        list-style-type: none;
+        padding: 0px;
+    }
+
+    & a {
+        color: #72777F;
+        font-size: 12px;
+        padding: 0;
+        transition-duration: 0.3s;
+       &:hover{
+           text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+           color: rgba(255, 255, 255,0.7);
+           transition-duration: 0.3s;
+        }
+    }
+
+    & li {
+        line-height: 22px;
+        font-size: 12px;
+        margin-bottom: 4px;
+        padding-bottom: 4px;
+    }
+}
+
+#footer-widget {
+    padding-top: 40px;
+    padding-bottom: 35px;
+    flex-direction: initial;
+    @media #{$media-medium} {
+        flex-direction: column-reverse;
+    }
+}
+
+.footer_category{
+    @media #{$media-medium} {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+}
+
+.copyright {
+    height: 60px;
+    background-color: #323840;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*********************************************
+Contact
+**********************************************/
+
+#contact_footer{
+        
+    .fa {
+        margin-right: 20px;
+    }
+
+    a { 
+        padding: 0;
+        transition-duration: 0.3s;
+        &:hover{
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255,0.7);
+            transition-duration: 0.3s;
+            }
+        }
+}
+
+/*********************************************
+Social Network
+**********************************************/
+
+#social_footer {
+
+
+    & li {
+        border: 2px solid #323840;
+        height: 40px;
+        width: 40px;
+        margin: 0px 10px 0px 0px;
+        padding: 0px;
+
+        &:hover {
+            transform: scale(0.9);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+
+            & a {
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    & a {
+        width: 100%;
+        height: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(159, 171, 179);
+        background-color: #323840;
+        font-size: 21px;
+    }
+}
+
+
+
+
