@@ -190,9 +190,7 @@
                                     id="customSwitch{{$key}}" value="{{$key}}"
                                     @if($action == 'store' && is_array(old('equipment_id')) && in_array($key, old('equipment_id'))) checked @endif
                                     @if($action == 'update')
-                                        @foreach ($equipment as $item)
-                                            @if($item === $key) checked @endif
-                                        @endforeach
+                                        @if(in_array($key, $equipment)) checked @endif
                                     @endif>
                                 <label class="custom-control-label" for="customSwitch{{$key}}">{{$value}}</label>
                             </div>

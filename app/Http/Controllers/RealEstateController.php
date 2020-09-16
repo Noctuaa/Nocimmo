@@ -155,14 +155,12 @@ class RealEstateController extends Controller
         if($category === 'ventes' || $category === 'locations'){
             /*$equipment = RealEstate::join('equipment_real_estate', 'real_estates.id', '=', 'equipment_real_estate.real_estate_id')
             ->join('equipments', 'equipments.id','=', 'equipment_real_estate.equipment_id')
-            ->where('real_estates.id', $realEstate->id)->selectRaw('equipments.id, equipments.*')->pluck('name', 'id');*/
-            $equipment =  DB::table('equipment_real_estate')->where('real_estate_id', $realEstate->id)->pluck('equipment_id');
+            ->where('real_estates.id', $realEstate->id)->selectRaw('equipments.id, equipments.*')->pluck('id');*/
+            $equipment =  DB::table('equipment_real_estate')->where('real_estate_id', $realEstate->id)->pluck('equipment_id')->toArray();
             return view('immo.show', compact('realEstate', 'equipment'));
         }else{
             abort(404);
         }
-
-
     }
 
     /**
@@ -177,7 +175,7 @@ class RealEstateController extends Controller
         /*$equipment = RealEstate::join('equipment_real_estate', 'real_estates.id', '=', 'equipment_real_estate.real_estate_id')
         ->where('real_estates.id', $realEstate->id)->get('equipment_id');*/
 
-        $equipment =  DB::table('equipment_real_estate')->where('real_estate_id', $realEstate->id)->pluck('equipment_id');
+        $equipment =  DB::table('equipment_real_estate')->where('real_estate_id', $realEstate->id)->pluck('equipment_id')->toArray();
         return view('immo.edit', compact('realEstate', 'equipment'));
     }
 

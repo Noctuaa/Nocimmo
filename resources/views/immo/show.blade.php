@@ -50,7 +50,7 @@
                 <ul class="list-inline row d-flex justify-content-center col-lg-6 col-12">
                     @foreach (App\Equipment::pluck('name', 'id') as $key => $value)
                     <li class="list-inline-item align-items-center p-2 d-flex flex-wrap">
-                        @if (isset($equipment[$key]) && $value == $equipment[$key])
+                        @if (in_array($key, $equipment))
                         <font-awesome-icon class="fa-check mr-2" icon="check" />
                         </font-awesome-icon> {{$value}}
                         @else
