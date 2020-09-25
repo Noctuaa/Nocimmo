@@ -56,7 +56,8 @@ class RealEstateController extends Controller
     {
       
         $title = $category;
-        $realEstate = RealEstate::where(function ($query) use ($request) {
+        $category = trans($category, [], 'en');
+        $realEstate = RealEstate::where('category', $category)->where(function ($query) use ($request) {
             if($request->bedroom) {
                 $query->where('bedroom', '>=', $request->bedroom);
             };
